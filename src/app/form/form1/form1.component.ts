@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { User } from 'src/app/user';
 @Component({
   selector: 'app-form1',
@@ -6,7 +6,9 @@ import { User } from 'src/app/user';
   styleUrls: ['./form1.component.css']
 })
 export class Form1Component implements OnInit {
-onSubmit(){
+  newUser = new User("","","","");
+  @Output() addUser = new EventEmitter<User>();
+  onSubmit(){
  
 }
   constructor() { }
