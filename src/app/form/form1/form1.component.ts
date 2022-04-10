@@ -6,7 +6,7 @@ import { User } from 'src/app/user';
   styleUrls: ['./form1.component.css']
 })
 export class Form1Component implements OnInit {
-  newUser = new User("","","","");
+  newUser = new User(0,"","","","");
   @Output() addUser = new EventEmitter<User>();
   onSubmit(){
  
