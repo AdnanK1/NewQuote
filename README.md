@@ -17,4 +17,4 @@ The Technologies used in making the project are:
     5.Typescript
 
 # Support and contact details
-Any query need to be answered concerning to the project should be directed to this email: adnangitonga@gmail.com
+To view the project please click on this link: https://new-quote.vercel.app/ . Any query need to be answered concerning to the project should be directed to this email: adnangitonga@gmail.com
