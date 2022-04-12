@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { newArray } from '@angular/compiler/src/util';
+import { Component, OnInit, Input } from '@angular/core';
 import { User } from 'src/app/user';
 
 @Component({
@@ -7,12 +8,16 @@ import { User } from 'src/app/user';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  user: any;
-  addNewUser(_user: any){
-    let goalLength = this.user.length;
-    User.id = goalLength+1;
-    this.user.push(User)
+  newQuote: User [ ] = [ ]  
+  
+  newUser(quote:any){
+    quote.firstName = quote.firstName
+    quote.lastName = quote.lastName
+    quote.quote = quote.quote
+    quote.authorName = quote.authorName
+    this.newQuote.push(quote);
   }
+
   constructor() { }
 
   ngOnInit(): void {
