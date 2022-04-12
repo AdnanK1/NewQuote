@@ -1,3 +1,12 @@
 <body>
-    <app-form1></app-form1>
+    <app-form1 (addQuotes)="addNewQuotes($event)"> </app-form1>
+    <div *ngFor="let quote of newQuote; let i = index">
+        <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{quote.firstName}}{{quote.lastName}}</div>
+            <div class="card-body text-primary">
+                <h5 class="card-title">{{quote.quote}}</h5>
+                <p class="card-text">{{quote.authorName}}</p>
+            </div>
+        </div>
+    </div>
 </body>

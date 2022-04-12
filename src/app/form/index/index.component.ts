@@ -1,5 +1,5 @@
 import { newArray } from '@angular/compiler/src/util';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { User } from 'src/app/user';
 
 @Component({
@@ -15,6 +15,11 @@ export class IndexComponent implements OnInit {
     quote.lastName = quote.lastName
     quote.quote = quote.quote
     quote.authorName = quote.authorName
+    this.newQuote.push(quote);
+  }
+  addNewQuotes(quote: any) {
+    let goalLength = this.newQuote.length;
+    quote.id = goalLength + 1;
     this.newQuote.push(quote);
   }
 
